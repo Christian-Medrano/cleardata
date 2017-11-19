@@ -8958,3 +8958,26 @@ a.text-link-active:focus, a.text-link-active:hover {
   width: 100%;
   object-fit: cover;
 }
+
+.card-header {
+  min-height: 5em;
+}
+
+.devices {
+  max-height: 25rem;
+  overflow-y: scroll;
+}
+
+.device {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2em (1fr)[9];
+      grid-template-columns: 2em repeat(9, 1fr);
+  grid-column-gap: 4px;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.device input {
+  width: 2em;
+}
