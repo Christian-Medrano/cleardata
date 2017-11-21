@@ -57,9 +57,9 @@ include "counters.php";
 	<div class="row py-3">
 		<div class="col-md-12">
 			<div class="card">
-				<div class="card-header">
-					<input type="checkbox">
-					Total Devices: | Total Selected:
+				<div class="card-header d-flex align-items-center">
+					<input type="checkbox" id="select-all" class="mr-3">
+					Total Devices: <span class="total-devices"></span> | Total Selected:
 					
 					<div class="ml-auto">
 						<button class="btn">
@@ -74,13 +74,15 @@ include "counters.php";
 					</div>
 					
 				</div>
-				<div class="devices card-body">
+				<ul class="devices card-body">
 					
 					<?php $i = 0; ?>
 					<?php do{ ?>	
 
-					<div class="device py-3">
-						<input type="checkbox">
+					<li class="device py-3">
+						<div class="d-flex align-items-center">
+							<input type="checkbox" class="select d-inline align-middle">
+						</div>
 						<div class="device-attribute border border-secondary p-2">
 							Device ID
 						</div>
@@ -108,14 +110,14 @@ include "counters.php";
 						<div class="device-attribute border border-secondary p-2">
 							Usage History
 						</div>
-					</div>
+					</li>
 
 					<?php 
 							$i++;
-						} while ($i < 20)
+						} while ($i <= 20)
 					?>
 
-				</div>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -123,4 +125,29 @@ include "counters.php";
 </main>
 
 
+
+
 <?php include "footer.php"; ?>
+
+<script>
+	$('#home').addClass('active');
+
+	// Listen for click on toggle checkbox
+	$('#select-all').click(function(event) {   
+	    if(this.checked) {
+	        // Iterate each checkbox
+	        $(':checkbox').each(function() {
+	            this.checked = true;                        
+	        });
+	    } else {
+	    	// Iterate each checkbox
+	    	$(':checkbox').each(function() {
+	    	    this.checked = false;                        
+	    	});
+	    }
+	});
+
+	$('.total-devices').text('20');
+
+	
+</script>

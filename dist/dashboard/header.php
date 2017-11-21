@@ -5,6 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 	<link href="../css/bootstrap.css" rel="stylesheet">
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>  
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>            
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 	<title>ClearData</title>
 </head>
 <body class="bg-light">
@@ -15,30 +21,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <a class="navbar-brand" href="index.php">ClearData</a>
+      <a class="navbar-brand" href=""><strong>ClearData</strong></a>
 
       <div class="collapse navbar-collapse" id="global-nav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="home.php">Home</a>
+            <a class="nav-link" href="home.php" id="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Devices</a>
+            <a class="nav-link" href="devices.php" id="devices">Devices</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Transactions</a>
+            <a class="nav-link" href="" id="transactions">Transactions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">News</a>
+            <a class="nav-link" href="" id="news">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Coverage</a>
+            <a class="nav-link" href="" id="coverage">Coverage</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Reports</a>
+            <a class="nav-link" href="" id="reports">Reports</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Support</a>
+            <a class="nav-link" href="" id="support">Support</a>
           </li>
         </ul>
       </div>
