@@ -5,9 +5,7 @@ include "counters.php";
 
 ?>
 
-<?php include "footer.php"; ?>
-
-<!-- device options -->
+<!-- table controls -->
 <div class="container-fluid py-3">
 	<div class="row">
 		<div class="col col-md-7">
@@ -40,14 +38,17 @@ include "counters.php";
 		</div>
 	</div>
 </div>
-<!-- END device options -->
+<!-- END table controls -->
 
+
+<!-- device table -->
 <main class="container-fluid">
 	<?php include 'devicetable.php' ?>
 </main>
 
+<!-- column customization modal -->
 <div id="exampleModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
     	<div class="modal-header">
               <h5 class="modal-title">Column Customization</h5>
@@ -56,42 +57,87 @@ include "counters.php";
               </button>
     	</div>
 
-		<form action="">
-			<div class="form-row p-3">
-				<div class="option col-6 p-3 d-flex align-items-center">
+		<div class="container-fluid">
+
+			<div class="row p-3">
+				<div class="option col-4 p-3 d-flex align-items-center">
 					<label class="switch mr-3">
 					  <input type="checkbox" checked>
 					  <span class="slider round"></span>
 					</label>
-					Column
+					Device ID
 				</div>
-				<div class="option col-6 p-3 d-flex align-items-center">
+
+				<div class="option col-4 p-3 d-flex align-items-center">
 					<label class="switch mr-3">
 					  <input type="checkbox" checked>
 					  <span class="slider round"></span>
 					</label>
-					Column
+					Carrier
+				</div>
+
+				<div class="option col-4 p-3 d-flex align-items-center">
+					<label class="switch mr-3">
+					  <input type="checkbox" checked>
+					  <span class="slider round"></span>
+					</label>
+					State
 				</div>
 			</div>
 
-			<div class="form-row p-3">
-				<div class="option col-6 p-3 d-flex align-items-center">
+			<div class="row p-3">
+				<div class="option col-4 p-3 d-flex align-items-center">
 					<label class="switch mr-3">
 					  <input type="checkbox" checked>
 					  <span class="slider round"></span>
 					</label>
-					Column
+					Created
 				</div>
-				<div class="option col-6 p-3 d-flex align-items-center">
+
+				<div class="option col-4 p-3 d-flex align-items-center">
 					<label class="switch mr-3">
 					  <input type="checkbox" checked>
 					  <span class="slider round"></span>
 					</label>
-					Column 
+					Name
+				</div>
+
+				<div class="option col-4 p-3 d-flex align-items-center">
+					<label class="switch mr-3">
+					  <input type="checkbox" checked>
+					  <span class="slider round"></span>
+					</label>
+					Description
 				</div>
 			</div>
-	
-		</form>
+
+			<div class="row p-3">
+				<div class="option col-4 p-3 d-flex align-items-center">
+					<label class="switch mr-3">
+					  <input type="checkbox" checked>
+					  <span class="slider round"></span>
+					</label>
+					Updated
+				</div>
+
+				<div class="option col-4 p-3 d-flex align-items-center">
+					<label class="switch mr-3">
+					  <input type="checkbox" checked>
+					  <span class="slider round"></span>
+					</label>
+					Location
+				</div>
+
+				<div class="option col-4 p-3 d-flex align-items-center">
+					<label class="switch mr-3">
+					  <input type="checkbox" checked>
+					  <span class="slider round"></span>
+					</label>
+					Usage History
+				</div>
+			</div>
+
+		</div>
 
     	<div class="modal-footer">
     	    <button type="button" class="btn btn-primary">Save changes</button>
@@ -100,30 +146,7 @@ include "counters.php";
     </div>
   </div>
 </div>
-
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+<!-- END column customization modal -->
 
 <script>
 	$('#devices').addClass('active');
@@ -145,3 +168,5 @@ include "counters.php";
 
 	
 </script>
+
+<?php include "footer.php"; ?>

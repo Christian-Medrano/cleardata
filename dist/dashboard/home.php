@@ -60,18 +60,15 @@ include "counters.php";
 				<div class="card-header">
 					Devices
 				</div>
-				<div class="card-body">
+				<div class="card-body h-max">
 					<?php include 'devicetable.php'; ?>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </main>
 
-
-
-
-<?php include "footer.php"; ?>
 
 <script>
 	$('#home').addClass('active');
@@ -95,3 +92,5 @@ include "counters.php";
 
 	
 </script>
+
+<?php include "footer.php"; ?>
