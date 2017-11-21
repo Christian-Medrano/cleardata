@@ -1,4 +1,4 @@
-<div class="container-fluid bg-dark">
+<div class="container-fluid bg-dark" id="device-counter">
 	<div class="container">
 		<div class="row py-4 justify-content-center">
 			<div class="card-deck">

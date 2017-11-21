@@ -57,71 +57,15 @@ include "counters.php";
 	<div class="row py-3">
 		<div class="col-md-12">
 			<div class="card">
-				<div class="card-header d-flex align-items-center">
-					<input type="checkbox" id="select-all" class="mr-3">
-					Total Devices: <span class="total-devices"></span> | Total Selected:
-					
-					<div class="ml-auto">
-						<button class="btn">
-							Filter
-						</button>
-						<button class="btn">
-							Download
-						</button>
-						<button class="btn">
-							Customize
-						</button>
-					</div>
-					
+				<div class="card-header">
+					Devices
 				</div>
-				<ul class="devices card-body">
-					
-					<?php $i = 0; ?>
-					<?php do{ ?>	
-
-					<li class="device py-3">
-						<div class="d-flex align-items-center">
-							<input type="checkbox" class="select d-inline align-middle">
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Device ID
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Carrier
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							State
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Created
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Name
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Description
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Updated
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Location
-						</div>
-						<div class="device-attribute border border-secondary p-2">
-							Usage History
-						</div>
-					</li>
-
-					<?php 
-							$i++;
-						} while ($i <= 20)
-					?>
-
-				</ul>
+				<div class="card-body">
+					<?php include 'devicetable.php'; ?>
+				</div>
 			</div>
 		</div>
 	</div>
-
 </main>
 
 

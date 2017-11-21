@@ -1,42 +1,41 @@
-<?php  
- $connect = mysqli_connect("localhost", "root", "", "devices");  
- $query ="SELECT * FROM MOCK_DATA ORDER BY device_id DESC";  
- $result = mysqli_query($connect, $query);  
- ?>
-
-<table id="device_data" class="table table-striped">
-	<thead class="thead-light">
+<table id="device_data" class="table table-hover">
+	<thead class="thead-dark">
 		<tr>
 			<td><input type="checkbox"></td>
-			<td>Device ID</td>
-			<td>Carrier</td>
-			<td>State</td>
-			<td>Created</td>
-			<td>Name</td>
-			<td>Description</td>
-			<td>Updated</td>
-			<td>Location</td>
-			<td>Usage History</td>
+			<td><strong>Device ID</strong></td>
+			<td><strong>Carrier</strong></td>
+			<td><strong>State</strong></td>
+			<td><strong>Created</strong></td>
+			<td><strong>Name</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Updated</strong></td>
+			<td><strong>Location</strong></td>
+			<td><strong>Usage History</strong></td>
 		</tr>
 	</thead>
+	<tbody>
 	<?php 
-	while($row = msqli_fetch_array($result)){
-		echo '
-		<tr>
-			<td>'.$row["device_id"].'</td>
-			<td>'.$row["carrier"].'</td>
-			<td>'.$row["state"].'</td>
-			<td>'.$row["created"].'</td>
-			<td>'.$row["name"].'</td>
-			<td>'.$row["description"].'</td>
-			<td>'.$row["updated"].'</td>
-			<td>'.$row["location"].'</td>
-			<td>'.$row["usage_history"].'</td>
-		</tr>
-		';
-	}
+		$i = 1;
 
+		do {
+			echo '
+				<tr>
+					<td><input type="checkbox"></td>
+					<td>8393740-1</td>
+					<td>Verizon</td>
+					<td>California</td>
+					<td>11/26/16</td>
+					<td>Johnny</td>
+					<td>Vending</td>
+					<td>10/28/17</td>
+					<td>Topanga Mall</td>
+					<td>113 GB</td>
+				</tr>
+			';
+			$i++;
+		} while ($i <= 20)
 	 ?>
+	 </tbody>
 </table>
 
 <script>

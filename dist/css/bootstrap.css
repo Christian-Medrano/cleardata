@@ -8959,7 +8959,7 @@ a.text-link-active:focus, a.text-link-active:hover {
   object-fit: cover;
 }
 
-.card-header {
+#device-counter .card-header {
   min-height: 5em;
 }
 
@@ -9007,6 +9007,10 @@ a.text-link-active:focus, a.text-link-active:hover {
 
 .selected {
   background-color: #f8f9fa;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .switch {
