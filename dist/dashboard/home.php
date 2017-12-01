@@ -1,6 +1,7 @@
 <?php 
 
 include "header.php"; 
+// load device counters
 include "counters.php";
 
 ?>
@@ -32,7 +33,7 @@ include "counters.php";
 </div>
 <!-- END device options -->
 
-
+<!-- dashboard main content -->
 <main class="container-fluid">
 	<div class="row">
 
@@ -61,6 +62,7 @@ include "counters.php";
 					Devices
 				</div>
 				<div class="card-body h-max">
+					<!-- include device table -->
 					<?php include 'devicetable.php'; ?>
 				</div>
 			</div>
@@ -69,8 +71,11 @@ include "counters.php";
 
 </main>
 
+<?php include "footer.php"; ?>
+
 
 <script>
+	// add class "active" to navigation link
 	$('#home').addClass('active');
 
 	// Listen for click on toggle checkbox
@@ -87,10 +92,4 @@ include "counters.php";
 	    	});
 	    }
 	});
-
-	$('.total-devices').text('20');
-
-	
 </script>
-
-<?php include "footer.php"; ?>

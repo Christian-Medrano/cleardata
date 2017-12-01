@@ -1,7 +1,7 @@
 <table id="device_data" class="table table-hover">
 	<thead class="thead-dark">
 		<tr>
-			<td><input type="checkbox"></td>
+			<td><input type="checkbox" id="select-all"></td>
 			<td><strong>Device ID</strong></td>
 			<td><strong>Carrier</strong></td>
 			<td><strong>State</strong></td>

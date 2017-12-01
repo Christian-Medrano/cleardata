@@ -25,13 +25,13 @@ include "counters.php";
 
 		<div class="col col-md-5 d-flex justify-content-end">
 			<div class="ml-auto">
-				<button class="btn">
+				<button type="button" class="btn" data-toggle="modal" data-target="#filterModal">
 					Filter
 				</button>
 				<button class="btn">
 					Download
 				</button>
-				<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+				<button type="button" class="btn" data-toggle="modal" data-target="#customizeModal">
 					Customize
 				</button>
 			</div>
@@ -46,8 +46,99 @@ include "counters.php";
 	<?php include 'devicetable.php' ?>
 </main>
 
+<!-- filters modal -->
+<div id="filterModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+              <h5 class="modal-title">Filter Devices</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+    	</div>
+
+    	<div class="container-fluid">
+			<div class="card-deck py-3">
+				
+				<!-- carrier select -->
+				<div class="card">
+					<div class="card-header">
+					    Carrier
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<input type="checkbox"> AT&amp;T
+						</p>
+						<p class="card-text">
+							<input type="checkbox"> Verizon
+						</p>
+					</div>
+				</div>
+
+				<!-- status select -->
+				<div class="card">
+					<div class="card-header">
+					    Status
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<input type="checkbox"> Activated
+						</p>
+						<p class="card-text">
+							<input type="checkbox"> Deactivated
+						</p>
+						<p class="card-text">
+							<input type="checkbox"> Suspended
+						</p>
+						<p class="card-text">
+							<input type="checkbox"> Test Ready
+						</p>
+						<p class="card-text">
+							<input type="checkbox"> Activation Ready
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck py-3">
+				
+				<!-- billing period select -->
+				<div class="card">
+					<div class="card-header">
+					    Billing Period
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<input type="checkbox"> ...
+						</p>
+					</div>
+				</div>
+
+				<!-- service plan select -->
+				<div class="card">
+					<div class="card-header">
+					    Service Plan
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<input type="checkbox"> ...
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    	<div class="modal-footer">
+    	    <button type="button" class="btn btn-primary">Save Changes</button>
+    	    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    	</div>
+    </div>
+  </div>
+</div>
+<!-- END column customization modal -->
+
 <!-- column customization modal -->
-<div id="exampleModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="customizeModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     	<div class="modal-header">
@@ -148,7 +239,10 @@ include "counters.php";
 </div>
 <!-- END column customization modal -->
 
+<?php include "footer.php"; ?>
+
 <script>
+	// add class active to devices nav link
 	$('#devices').addClass('active');
 
 	// Listen for click on toggle checkbox
@@ -165,8 +259,4 @@ include "counters.php";
 	    	});
 	    }
 	});
-
-	
 </script>
-
-<?php include "footer.php"; ?>
