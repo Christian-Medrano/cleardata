@@ -6,35 +6,8 @@ include "counters.php";
 
 ?>
 
-<!-- device options -->
-<div class="container-fluid py-3">
-	<div class="row">
-		<div class="col col-md-7">
-			<form action="">
-				<div class="form-row">
-					<div class="col-auto">
-						<input type="text" class="form-control" placeholder="search devices">
-					</div>
-					<div class="col-auto">
-						<button class="btn">
-							Search
-						</button>
-					</div>
-				</div>
-			</form>
-		</div>
-
-		<div class="col col-md-5 d-flex justify-content-end">
-			<button class="btn">
-				Customize
-			</button>
-		</div>
-	</div>
-</div>
-<!-- END device options -->
-
 <!-- dashboard main content -->
-<main class="container-fluid">
+<main class="container-fluid py-3">
 	<div class="row">
 
 		<div class="col-md-6">
@@ -55,13 +28,15 @@ include "counters.php";
 	</div>
 
 	<!-- device list -->
-	<div class="row py-3">
+	<div class="row pt-3">
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
 					Devices
+					<?php include 'device-controls.php'; ?>
+					<table class="table" id="devices-card-header"></table>
 				</div>
-				<div class="card-body h-max">
+				<div class="card-body h-max device-table">
 					<!-- include device table -->
 					<?php include 'devicetable.php'; ?>
 				</div>
@@ -92,4 +67,6 @@ include "counters.php";
 	    	});
 	    }
 	});
+
+	$('#device-table-header').appendTo('#devices-card-header')
 </script>

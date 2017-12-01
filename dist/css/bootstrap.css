@@ -9013,6 +9013,11 @@ a.text-link-active:focus, a.text-link-active:hover {
   cursor: pointer;
 }
 
+.h-max {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
 .switch {
   position: relative;
   display: inline-block;
